@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ang写的美团</title>
+    <!-- <script src="./js/angular-1.7.0.js"></script>
+    <script src="js/angular.js"></script> -->
 </head>
-
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
-        <p>
-            {{name}}
-            {{age}}
-        </p>
-        <input type="text" placeholder='{{name}}'>
-
+       <ul ng-style="ulstyle">
+           <li ng-repeat="item in info"  ng-style="listyle">
+               <img src="" ng-src="../static/img/{{item.img}}" alt="" ng-style="imgstyle">
+               <div ng-app="myApp" ng-controller="myCtrl">
+                   <span>{{item.name}}</span>
+                   <span>{{item.price}}</span>
+                   <p>
+                       配送时间:{{item.time}}
+                   </p>
+                   <button ng-click="joinCart">加入购物车</button>
+               </div>
+           </li>
+       </ul>
     </div>
 </body>
-
 </html>
